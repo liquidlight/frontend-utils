@@ -1,0 +1,18 @@
+{
+	"name": "@packages/utils",
+	"version": "1.0.0",
+	"description": "Utils - collection of JS functions",
+	"main": "src/js/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git@gitlab.lldev.co.uk:packages/npm/utils.git"
+	},
+	"author": "João Augusto <joao@liquidlight.co.uk>",
+	"contributors": [
+		"Mike Street <mike@liquidlight.co.uk>"
+	],
+	"license": "ISC",
+	"publishConfig": {
+		"@packages:registry":" https://gitlab.lldev.co.uk/api/v4/projects/338/packages/npm/"
+	}
+}
