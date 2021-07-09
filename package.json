@@ -13,6 +13,6 @@
 	],
 	"license": "ISC",
 	"publishConfig": {
-		"@packages:registry":" https://gitlab.lldev.co.uk/api/v4/projects/338/packages/npm/"
+		"@packages:registry":" https://gitlab.lldev.co.uk/api/v4/projects/339/packages/npm/"
 	}
 }
