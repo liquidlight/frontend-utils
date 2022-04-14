@@ -33,6 +33,11 @@ export {default as debounce} from './modules/debounce';
 export * from './modules/mobile-view';
 
 /**
+ * Related with Window or Document
+ */
+export * from './modules/document';
+
+/**
  * A collection of functions to test support for various browser features
  * @example
  * if(supports.passive())
@@ -67,4 +72,3 @@ export {default as detectIE} from './modules/detect-browser';
  * Turns a string into a url/class/id friendly string
  */
 export {default as slugify} from './modules/slugify';
-
