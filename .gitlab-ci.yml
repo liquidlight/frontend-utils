@@ -1,12 +1,26 @@
-image: node:latest
+###
+# Gitlab CI
+#
+# @author Mike Street
+# @date 06-2021
+#
+###
+
+include:
+  - project: 'devops/gitlab-ci'
+    file: '.gitlab-ci-template.yml'
 
 stages:
-  - Release
+  - lint
+  - release
+
+# Define stages for jobs
+js:lint:
+  stage: lint
+  extends:
+    - .js:eslint
 
 release:tag:
-  stage: Release
-  script:
-    - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">.npmrc
-    - npm publish
-  only:
-    - tags
+  stage: release
+  extends:
+    - .npm:tag:release
