@@ -60,6 +60,12 @@ export {default as reduceMotionOnSite} from './modules/reduced-motion';
  */
 export {default as extend} from './modules/extend';
 
+
+/**
+ * Localisation
+ */
+export * from './modules/labels';
+
 /**
  * detect IE
  * returns version of IE or false, if browser is not Internet Explorer
