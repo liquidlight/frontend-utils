@@ -1,3 +1,0 @@
-# Minor
-
-- Add localisation function
