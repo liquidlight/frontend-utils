@@ -1,0 +1,3 @@
+# Minor
+
+- Add GUID generator

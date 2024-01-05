@@ -78,9 +78,13 @@ export {default as detectIE} from './modules/detect-browser';
  */
 export {default as slugify} from './modules/slugify';
 
-
 /**
  * Strip tags
  * Allow only specific HTML tags
  */
 export {default as stripTags} from './modules/strip-tags';
+
+/**
+ * GUID generator
+ */
+export * from './modules/guid-generator';
