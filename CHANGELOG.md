@@ -1,3 +1,11 @@
+# 1.4.1
+
+**28th February 2025**
+
+#### Fix
+
+- Add `summary` to allowed schema tags
+
 # 1.4.0
 
 **5th January 2024**
