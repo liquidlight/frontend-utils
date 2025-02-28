@@ -3,7 +3,7 @@
 // original function in Stackoverflow
 // https://stackoverflow.com/a/31259386/8795871
 
-const allowedSchemaTags = '<h1><h2><h3><h4><h5><h6><br><ol><ul><li><a><p><div><b><strong><i><em>';
+const allowedSchemaTags = '<h1><h2><h3><h4><h5><h6><br><ol><ul><li><a><p><div><b><strong><i><em><summary>';
 
 export default (input, allowedTags = allowedSchemaTags) => {
 	var allowed = (((allowedTags || '') + '')
