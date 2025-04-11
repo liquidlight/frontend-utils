@@ -29,3 +29,27 @@ $.extend(true, labels, {
 const cookieBanner = $(`<div class="cookiePolicy">${l('cookie.message')}</div>`);
 
 ```
+
+## Debounce
+
+An example of sticky navigation on scroll with `debounce` function
+
+**Usage**
+
+```javascript
+import { debounce } from '@packages/utils';
+
+(() => {
+	const header = $('.siteHeader'),
+		headerHeight = header.outerHeight(true);
+
+	window.addEventListener('scroll', debounce(function() {
+		if ($(this).scrollTop() > headerHeight) {
+			header.addClass('isFixed');
+		} else {
+			header.removeClass('isFixed');
+		}
+	}, 200));
+})();
+
+```
