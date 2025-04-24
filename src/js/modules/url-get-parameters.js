@@ -1,3 +1,6 @@
+/**
+ * @deprecated Since version 1.0. Will be deleted in version 2.0. Use URLSearchParams() instead
+ */
 // From: https://stackoverflow.com/a/21903119/1324321
 // Usage:
 // import getUrlParameters from 'Utils/polyfills/url-get-parameters';

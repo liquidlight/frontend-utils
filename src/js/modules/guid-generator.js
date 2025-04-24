@@ -1,5 +1,7 @@
-// ID generator
-// https://stackoverflow.com/a/6860916
+/**
+ * https://stackoverflow.com/a/6860916
+ * @deprecated Since version 1.0. Will be deleted in version 2.0. Use Crypto instead
+ */
 export function guidGenerator() {
 	var S4 = function() {
 		return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
