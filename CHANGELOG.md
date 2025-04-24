@@ -1,3 +1,17 @@
+# 2.0.0
+
+**24th April 2025**
+
+#### Build
+
+- Install local linting
+
+#### Refactor
+
+- Remove `url-get-parameters` function
+- Remove `closest()` polyfill
+- Remove `guid-generator`
+
 # 1.4.1
 
 **28th February 2025**
