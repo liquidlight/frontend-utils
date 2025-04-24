@@ -6,7 +6,6 @@
  * ====
  */
 import 'core-js/stable/symbol/iterator';
-import './polyfills/element-closest';
 import './polyfills/foreach';
 import './polyfills/includes';
 
