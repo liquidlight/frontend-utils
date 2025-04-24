@@ -1,9 +1,9 @@
 // https://github.com/imagitama/nodelist-foreach-polyfill/blob/master/index.js
-if (typeof window !== 'undefined' && window.NodeList && !NodeList.prototype.forEach) {
-	NodeList.prototype.forEach = function(callback, thisArg) {
-		thisArg = thisArg || window;
-		for (var i = 0; i < this.length; i++) {
-			callback.call(thisArg, this[i], i, this);
+if (globalThis.window !== undefined && globalThis.NodeList && !NodeList.prototype.forEach) {
+	NodeList.prototype.forEach = function(callback, thisArgument) {
+		thisArgument = thisArgument || globalThis;
+		for (var index = 0; index < this.length; index++) {
+			callback.call(thisArgument, this[index], index, this);
 		}
 	};
 }

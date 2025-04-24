@@ -1,0 +1,4 @@
+# Linting
+.cache
+
+node_modules

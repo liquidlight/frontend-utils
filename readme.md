@@ -53,3 +53,9 @@ import { debounce } from '@packages/utils';
 })();
 
 ```
+
+## Migrate to version 2
+
+- `docReady()` was renamed to `documentReady()`
+- `url-get-parameters` function was removed. Use the native `URLSearchParams()` - see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) on MDN
+- `guid-generator` was also removed in favour of native [Crypto](https://developer.mozilla.org/en-US/docs/Web/API/Crypto) interface eg. `const randomId = crypto.getRandomValues(new Uint32Array(1))[0]`

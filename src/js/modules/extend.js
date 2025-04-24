@@ -1,8 +1,6 @@
-'use strict';
-
-export default (a, b) => {
+export default function extend(a, b) {
 	for (const key in b) {
-		if (b.hasOwnProperty(key)) {
+		if (Object.hasOwn(b, key)) {
 			a[key] = b[key];
 		}
 	}

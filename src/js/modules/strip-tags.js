@@ -5,20 +5,20 @@
 
 const allowedSchemaTags = '<h1><h2><h3><h4><h5><h6><br><ol><ul><li><a><p><div><b><strong><i><em><summary>';
 
-export default (input, allowedTags = allowedSchemaTags) => {
-	var allowed = (((allowedTags || '') + '')
-		.toLowerCase()
-		.match(/<[a-z][a-z0-9]*>/g) || [])
-		.join(''); // making sure the allowed arg is a string containing only tags in lowercase (<a><b><c>)
+export default function stripTags(input, allowedTags = allowedSchemaTags) {
+	var allowed = ((`${allowedTags || ''}`)
+			.toLowerCase()
+			.match(/<[a-z][a-z0-9]*>/g) || [])
+			.join(''), // Making sure the allowed arg is a string containing only tags in lowercase (<a><b><c>)
 
-	var tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,
+		tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,
 		commentsAndPhpTags = /<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi;
 
-	let strippedTags = input
-		.replace(commentsAndPhpTags, '')
-		.replace(tags, function($0, $1) {
-			return allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : '';
+	const strippedTags = input
+		.replaceAll(commentsAndPhpTags, '')
+		.replaceAll(tags, function($0, $1) {
+			return allowed.includes(`<${$1.toLowerCase()}>`) ? $0 : '';
 		})
 		.trim();
-	return strippedTags.length ? strippedTags : false;
-}
+	return strippedTags.length > 0 ? strippedTags : false;
+};

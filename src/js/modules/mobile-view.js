@@ -1,5 +1,4 @@
-
-import {debounce} from '../index';
+import { debounce } from '../index';
 
 /**
  * Check if is a mobile device based on Agent

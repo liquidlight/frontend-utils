@@ -1,14 +1,13 @@
 (() => {
 	if (!Object.entries) {
-		Object.entries = function( obj ){
-			var ownProps = Object.keys( obj ),
-				i = ownProps.length,
-				resArray = new Array(i); // preallocate the Array
-			while (i--)
-			resArray[i] = [ownProps[i], obj[ownProps[i]]];
+		Object.entries = function(object) {
+			var ownProperties = Object.keys(object),
+				index = ownProperties.length,
+				resourceArray = Array.from({ index }); // Preallocate the Array
+			while (index--)
+				resourceArray[index] = [ownProperties[index], object[ownProperties[index]]];
 
-			return resArray;
+			return resourceArray;
 		};
 	}
 })();
-

@@ -2,23 +2,28 @@
 # Gitlab CI
 #
 # @author Mike Street
-# @date 06-2021
+# @date 04-2025
 #
 ###
 
 include:
   - project: 'devops/gitlab-ci'
-    file: '.gitlab-ci-template.yml'
+    file:
+      - '.gitlab-ci-template.yml'
+      - 'v2/jobs/install/npm.yml'
+      - 'v2/jobs/lint/eslint.yml'
 
 stages:
+  - install
   - lint
   - release
 
+install:npm:
+  extends: .install:npm
+
 # Define stages for jobs
-js:lint:
-  stage: lint
-  extends:
-    - .js:eslint
+lint:eslint:
+  extends: .lint:eslint
 
 release:tag:
   stage: release
