@@ -13,6 +13,14 @@
 	],
 	"license": "ISC",
 	"publishConfig": {
-		"@packages:registry":" https://gitlab.lldev.co.uk/api/v4/projects/339/packages/npm/"
+		"@packages:registry": " https://gitlab.lldev.co.uk/api/v4/projects/339/packages/npm/"
+	},
+	"scripts": {
+		"eslint:dry-run": "eslint src --color --cache --config node_modules/@lintkit/eslint-config/eslint.config.js --cache-location .cache/ --cache-strategy content",
+		"eslint:fix": "npm run eslint:dry-run -- --fix",
+		"lint": "npm run eslint:fix"
+	},
+	"dependencies": {
+		"@lintkit/eslint-config": "^2.0.0"
 	}
 }
