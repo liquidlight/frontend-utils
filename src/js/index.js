@@ -66,24 +66,19 @@ export {default as extend} from './modules/extend';
 export * from './modules/labels';
 
 /**
- * detect IE
+ * Detect IE
  * returns version of IE or false, if browser is not Internet Explorer
  */
-export {default as detectIE} from './modules/detect-browser';
+export { default as detectIE } from './modules/detect-browser';
 
 /**
  * Slugify
  * Turns a string into a url/class/id friendly string
  */
-export {default as slugify} from './modules/slugify';
+export { default as slugify } from './modules/slugify';
 
 /**
  * Strip tags
  * Allow only specific HTML tags
  */
-export {default as stripTags} from './modules/strip-tags';
-
-/**
- * GUID generator
- */
-export * from './modules/guid-generator';
+export { default as stripTags } from './modules/strip-tags';
