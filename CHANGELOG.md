@@ -1,3 +1,11 @@
+# 1.4.2
+
+**24th April 2025**
+
+#### Docs
+
+- Add deprecation warnings to `url-get-parameters` and `guid-generator`
+
 # 1.4.1
 
 **28th February 2025**

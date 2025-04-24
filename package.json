@@ -1,6 +1,6 @@
 {
 	"name": "@packages/utils",
-	"version": "1.4.1",
+	"version": "1.4.2",
 	"description": "Utils - collection of JS functions",
 	"main": "src/js/index.js",
 	"repository": {
