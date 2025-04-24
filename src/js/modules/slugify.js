@@ -1,10 +1,8 @@
-'use strict';
-
-export default (text) => {
+export default function slugify(text) {
 	return text.toString().toLowerCase()
-		.replace(/\s+/g, '-')           // Replace spaces with -
-		.replace(/[^\w-]+/g, '')       // Remove all non-word chars
-		.replace(/--+/g, '-')         // Replace multiple - with single -
-		.replace(/^-+/, '')             // Trim - from start of text
-		.replace(/-+$/, '');            // Trim - from end of text
+		.replaceAll(/\s+/g, '-') // Replace spaces with -
+		.replaceAll(/[^\w-]+/g, '') // Remove all non-word chars
+		.replaceAll(/--+/g, '-') // Replace multiple - with single -
+		.replace(/^-+/, '') // Trim - from start of text
+		.replace(/-+$/, ''); // Trim - from end of text
 };

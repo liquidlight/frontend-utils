@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * ====
  * Imports
@@ -21,7 +19,7 @@ import './polyfills/includes';
  * Allows you to run a function (on resize, for example) without overloading
  * the client's computer
  */
-export {default as debounce} from './modules/debounce';
+export { default as debounce } from './modules/debounce';
 
 /**
  * Determines if it's a mobile view
@@ -41,24 +39,23 @@ export * from './modules/document';
  * @example
  * if(supports.passive())
  */
-export {default as supports} from './modules/supports';
+export { default as supports } from './modules/supports';
 
 /**
  * Determines if the user has reduced motion _or_ is on < IE10
  * @example
  * if(reduceMotionOnSite()) {
- * 	return;
+ *   return;
  * }
  */
-export {default as reduceMotionOnSite} from './modules/reduced-motion';
+export { default as reduceMotionOnSite } from './modules/reduced-motion';
 
 /**
  * Merge two objects into new one
  * @example
  * newObj = extend(obj1, obj2);
  */
-export {default as extend} from './modules/extend';
-
+export { default as extend } from './modules/extend';
 
 /**
  * Localisation

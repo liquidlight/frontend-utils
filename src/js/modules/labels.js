@@ -1,24 +1,22 @@
 /**
  * Localisation
  */
-export let labels = {en: {}};
+export const labels = { en: {} };
 
 export function l(message, tokens) {
-	var string = new String();
+	var string = String();
 	try {
-		if(labels[$('html').attr('lang')][message] !== undefined) {
-			string = labels[$('html').attr('lang')][message];
-		} else {
-			string = message;
-		}
-	} catch(e) {
+		string = labels[$('html').attr('lang')][message] === undefined ? message : labels[$('html').attr('lang')][message];
+	} catch {
 		string = message;
 	}
 	try {
-		for(var token in tokens) {
-			re = new RegExp(token, 'gim');
+		for (var token in tokens) {
+			const re = new RegExp(token, 'gim');
 			string = string.replace(re, tokens[token]);
 		}
-	} catch(e) {}
+	} catch {
+		//
+	}
 	return string;
 };

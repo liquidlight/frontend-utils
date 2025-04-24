@@ -8,12 +8,12 @@
      // DOM is loaded and ready for manipulation here
    });
  */
-export function docReady(fn) {
-	// see if DOM is already available
+export function documentReady(function_) {
+	// See if DOM is already available
 	if (document.readyState === 'complete' || document.readyState === 'interactive') {
-		// call on next available tick
-		setTimeout(fn, 1);
+		// Call on next available tick
+		setTimeout(function_, 1);
 	} else {
-		document.addEventListener('DOMContentLoaded', fn);
+		document.addEventListener('DOMContentLoaded', function_);
 	}
 }
