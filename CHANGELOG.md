@@ -1,3 +1,11 @@
+# 2.1.0
+
+**8th December 2025**
+
+#### Refactor
+
+- Remove `core-js/stable/symbol/iterator` helper
+
 # 2.0.0
 
 **24th April 2025**
