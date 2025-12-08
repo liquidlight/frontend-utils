@@ -3,7 +3,6 @@
  * Imports
  * ====
  */
-import 'core-js/stable/symbol/iterator';
 import './polyfills/foreach';
 import './polyfills/includes';
 
