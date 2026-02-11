@@ -5,10 +5,10 @@
 	"main": "src/js/index.js",
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/liquidlight/utils.git"
+		"url": "git+ssh://git@github.com/liquidlight/frontend-utils.git"
 	},
 	"bugs": {
-		"url": "https://github.com/liquidlight/utils/issues"
+		"url": "https://github.com/liquidlight/frontend-utils/issues"
 	},
 	"author": "João Augusto <joao@liquidlight.co.uk>",
 	"contributors": [
