@@ -1,3 +1,11 @@
+# 2.2.0
+
+**11th February 2026**
+
+#### Feature
+
+- Move repo Github
+
 # 2.1.0
 
 **8th December 2025**
