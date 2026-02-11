@@ -1,4 +1,10 @@
 # Linting
+package-lock.json
 .cache
 
 node_modules
+
+._*
+.DS_Store
+
+*.tgz
