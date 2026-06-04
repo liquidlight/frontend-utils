@@ -22,11 +22,9 @@ export function isMobileAgent(agent = navigator.userAgent) {
 export function isMobileView(selector = '.mobileNavigation', fallbackWidth = DEFAULT_MOBILE_VIEW_MAX_WIDTH) {
 	const element = document.querySelector(selector);
 
-	if (element) {
-		return element.offsetParent !== null;
-	}
-
-	return window.matchMedia(`(max-width: ${fallbackWidth}px)`).matches;
+	return element ?
+		(element.offsetParent !== null) :
+		window.matchMedia(`(max-width: ${fallbackWidth}px)`).matches;
 }
 
 /**
