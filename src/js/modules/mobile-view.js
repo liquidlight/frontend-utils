@@ -1,5 +1,7 @@
 import { debounce } from '../index';
 
+const DEFAULT_MOBILE_VIEW_MAX_WIDTH = 715;
+
 /**
  * Check if is a mobile device based on Agent
  * @param {string} agent
@@ -13,11 +15,18 @@ export function isMobileAgent(agent = navigator.userAgent) {
 /**
  * Check if is a mobile based on selector being visible frontend
  * @param {string} selector
+ * @param {number} fallbackWidth
  * @returns {boolean}
  * @example isMobileView()
  */
-export function isMobileView(selector = '.mobileNavigation') {
-	return document.querySelector(selector).offsetParent !== null;
+export function isMobileView(selector = '.mobileNavigation', fallbackWidth = DEFAULT_MOBILE_VIEW_MAX_WIDTH) {
+	const element = document.querySelector(selector);
+
+	if (element) {
+		return element.offsetParent !== null;
+	}
+
+	return window.matchMedia(`(max-width: ${fallbackWidth}px)`).matches;
 }
 
 /**
