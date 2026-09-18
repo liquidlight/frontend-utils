@@ -1,3 +1,11 @@
+# 2.2.1
+
+**18th September 2026**
+
+#### Fix
+
+- Fallback to fixed width if mobile html element is missing
+
 # 2.2.0
 
 **11th February 2026**
