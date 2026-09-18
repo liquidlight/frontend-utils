@@ -12,12 +12,16 @@ export function isMobileAgent(agent = navigator.userAgent) {
 
 /**
  * Check if is a mobile based on selector being visible frontend
+ * Falls back to a screen-width check if the selector doesn't match an element
  * @param {string} selector
+ * @param {number} breakpoint - width (px) used as the mobile fallback threshold when selector isn't found
  * @returns {boolean}
  * @example isMobileView()
  */
-export function isMobileView(selector = '.mobileNavigation') {
-	return document.querySelector(selector).offsetParent !== null;
+export function isMobileView(selector = '.mobileNavigation', breakpoint = 715) {
+	const element = document.querySelector(selector);
+
+	return element ? element.offsetParent !== null : window.innerWidth <= breakpoint;
 }
 
 /**
